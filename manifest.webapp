@@ -1,0 +1,19 @@
+{
+  "name": "STATILLA",
+  "version": "1.0",
+  "description": "A cheat-sheet for highschool statistics course",
+  "launch_path": "/index.html",
+  "permissions": {
+    "storage": {
+      "description": "No storage usage"
+    }
+  },
+  "developer": {
+    "name": "Ruhshan Ahmed",
+    "url": "http://about.me/ruhshan"
+  },
+  "icons": {
+    "60": "/statilla_60.png",
+    "128": "/statilla_128.png"
+  }
+}

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>statilla</title>
+<!-- Copyright (c) 2009-2014 The MathJax Consortium -->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />-->
+<!--<meta http-equiv="X-UA-Compatible" content="IE=edge" />-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="vendors/jquery.mobile/jquery.mobile-1.1.1.min.css"/>
+    <link rel="stylesheet" href="resources/css/twitter-timeline.css" />
+    
+    <link rel="stylesheet" type="text/css" media="all" href="static/main.css">
+    <script src="vendors/jquery.mobile/jquery-1.7.1.min.js"></script>
+    <script src="vendors/jquery.mobile/jquery.mobile-1.1.1.min.js"></script>
+    
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+  });
+</script>
+<script type="text/javascript" src="MathJax.js"></script>
+
+
+</head>
+<body>
+<div id="twitter-timeline" data-role="page" data-theme='a'><!-- page -->
+            <div data-role="header" data-position="fixed" id="myheader" data-theme='b'><!-- header -->
+                <h1>STATILLA</h1>
+            </div>
+
+
+
+
+<div data-role="collapsible" data-theme='a ' data-iconpos='right' data-content-theme='b'>
+  <h1>Arithmatic mean</h2>
+    <p>
+      For Ungrouped data:
+        \begin{align}
+        AM & = \frac{\sum_{i=1}^n x_i}{n} 
+        \end{align} 
+      For grouped data:
+        \begin{align}
+        AM & =\frac{\sum_{i=1}^n f_i x_i}{\sum_{i=1}^n f_i}
+        \end{align}
+    </p>
+</div>
+
+<div data-role="collapsible" data-theme='a' data-iconpos='right' data-content-theme='b'>
+  <h2>Geometric Mean</h2>
+    <p>
+      For Ungrouped data:
+        \begin{align}
+        GM & = (\prod_{i=1}^{n} x_i)^\frac{1 }{n}
+        \end{align}
+      For Grouped data:
+        \begin{align}
+        GM & = (\prod_{i=1}^{k} {x_i}^{f_i})^\frac{1}{n}
+        \end{align}
+    </p>
+</div>
+
+<div data-role="collapsible" data-theme='a' data-iconpos='right' data-content-theme='b'>
+  <h2>Harmonic Mean</h2>
+    <p>
+      For Ungrouped data:
+        \begin{align}
+        HM & = \frac{n}{\sum_{i=1}^{n} \frac{1}{x_i}}
+        \end{align}
+      For Grouped data:
+        \begin{align}
+        HM & = \frac{\sum_{i=1}^{N} f_i}{\sum_{i=1}^{N} \frac{f_i}{\frac{f_i}{x_i}}}
+        \end{align}
+   </p>
+</div>
+
+<div data-role="collapsible" data-theme='a' data-iconpos='right' data-content-theme='b'>
+  <h2>Median</h2>
+    <p>For Ungrouped data:</p>
+    <p align="center">$\frac{n+1}{2}$th value when \(n\) is odd and \(\frac{\frac{n}{2}th\space value + (\frac{n}{2} +1)th\space value }{2}\) when \(n\) is even.
+    </p>
+    <p>
+      For Grouped data:
+      \begin{align}
+      M_e & = L + \frac{\frac{N}{2}-F}{f} \times C
+      \end{align}
+    </p>
+</div>
+
+<div data-role="collapsible" data-theme='a' data-iconpos='right' data-content-theme='b'>
+  <h2>Mode</h2>
+    <p>For Ungrouped data:</p>
+    <p align="center">Visible highest value.</p> 
+    <p>For Grouped Data:
+      \begin{align}
+      M_o & = L + \frac{\Delta_1}{\Delta_1 + \Delta_2} \times C
+      \end{align}
+    </p>
+</div>
+
+<div data-role="collapsible" data-theme='a' data-iconpos='right' data-content-theme='b'>
+  <h2>Quartile</h2>
+    <p>
+      \begin{align}
+      Q & = L + \frac{\frac{N}{4}i - F}{f} \times C
+      \end{align}
+    </p>
+</div>
+
+<div data-role="collapsible" data-theme='a' data-iconpos='right' data-content-theme='b'>
+  <h2>Decile</h2>
+    <p>
+      \begin{align}
+      D & = L + \frac{\frac{N}{10}i - F}{f} \times C
+      \end{align}
+  </p>
+</div>
+
+<div data-role="collapsible" data-theme='a' data-iconpos='right' data-content-theme='b'>
+  <h2>Quartile Deviation</h2>
+    <p>
+      \begin{align}
+      QD & = \frac{Q_2 - Q_1}{2}
+      \end{align}
+    </p>
+</div>
+
+<div data-role="collapsible" data-theme='a' data-iconpos='right' data-content-theme='b'>
+  <h2>Mean Deviations</h2>
+    <p>
+      For Ungrouped Data:
+      $
+      MD\space of \space\bar{x}  = \frac{\sum_{i=1}^{n} \lvert x_i - \bar{x} \rvert}{n} \\
+      MD\space of \space M_e  = \frac{\sum_{i=1}^{n} \lvert x_i - M_e \rvert}{n}\\
+      MD\space of \space M_o  = \frac{\sum_{i=1}^{n} \lvert x_i - M_o \rvert}{n}
+      $
+  </p>
+  <p>
+    For Grouped Data:
+    $
+    MD\space of \space\bar{x}  = \frac{\sum_{i=1}^{n} f_i \lvert x_i - \bar{x} \rvert}{n} \\
+    MD\space of \space M_e  = \frac{\sum_{i=1}^{n} f_i \lvert x_i - M_e \rvert}{n}\\
+    MD\space of \space M_o  = \frac{\sum_{i=1}^{n} f_i \lvert x_i - M_o \rvert}{n}
+    $
+  </p>
+</div>
+
+<div data-role="collapsible" data-theme='a' data-iconpos='right' data-content-theme='b'>
+  <h2>Variance</h2>
+  <p>
+  For Ungrouped Data:
+    $
+    V\space of\space x  = \frac{1}{n} \sum_{i=1}^{n}(x_i -\bar{x})^2
+    $
+  </p>
+  <p>
+    For Grouped Data:
+    $
+    V\space of\space x  = \frac{1}{N} \sum_{i=1}^{n} f_i (x_i -\bar{x})^2
+    $
+  </p>
+</div>
+
+<div data-role="collapsible" data-theme='a' data-iconpos='right' data-content-theme='b'>
+  <h2>Standard Deviation</h2>
+    <p>Ungrouped:
+    $
+    SD\space of\space x  = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2}
+    $
+    </p>
+
+    <p>Grouped:
+    \begin{align}
+    SD\space of\space x & = \sqrt{\frac{1}{N} \sum_{i=1}^{n} f_i(x_i - \bar{x})^2}
+    \end{align}</p>
+</div>
+
+<div data-role="collapsible" data-theme='a' data-iconpos='right' data-content-theme='b'>
+  <h2>Co-efficient of Variation</h2>
+    <p>
+    $
+    CV= \frac{Standard\space Deviation}{\bar{x}} \times 100 
+    $
+    </p>
+</div>
+
+<div data-role="collapsible" data-theme='a' data-iconpos='right' data-content-theme='b'>
+  <h2>Probability</h2>
+    <p>
+    $
+    P(A) \\ =\frac{Favourable\space outcome\space\ of\space an\space event}{Number\space of\space outcomes\space of\space the\space experiment}\\
+ \\= \frac{m}{n}
+    $
+    </p>
+</div>
+
+<div data-role="collapsible" data-theme='a' data-iconpos='right' data-content-theme='b'>
+  <h2>Probability:Additive law</h2>
+    <p>
+      $$
+      P(A \cup B)=\\ P(A)+P(B)-P(A \cap B)
+      $$
+    </p>
+</div>
+
+<div data-role="collapsible" data-theme='a' data-iconpos='right' data-content-theme='b'>
+  <h2>Probability: Multiplicative law</h2>
+    <p>
+    \begin{align}
+    P(AB) & = P(A) \times P(B/A) \\
+    & = P(B) \times P(A/B)
+    \end{align}
+    </p>
+</div>
+
+<div data-role="collapsible" data-theme='a' data-iconpos='right' data-content-theme='b'>
+  <h2>Conditional Probability</h2>
+    <p>
+    \begin{align}
+    P(A/B)&= \frac{P(AB)}{B}\\
+    P(B/A)&= \frac{P(AB)}{A}
+    \end{align}
+    </p>
+</div>
+
+<div data-role="collapsible" data-theme='a' data-iconpos='right' data-content-theme='b'>
+  <h2>Bayes's Theorem</h2>
+    <p>
+    $
+    P(B_k/A)=\frac{P(B_k) \cdot P(A/B_k)}{\sum_{i=1}^{n} P(B_i) \cdot P(A/B_i)}
+    $
+    </p>
+</div>
+
+<div data-role="collapsible" data-theme='a' data-iconpos='right' data-content-theme='b'>
+  <h2>Binomial Distribution</h2>
+    <p>
+      \begin{align}
+      f(k;n,p)&= {n \choose k}p^k(i-p)^{n-k}
+      \end{align}
+    </p>
+</div>
+
+<div data-role="collapsible" data-theme='a' data-iconpos='right' data-content-theme='b'>
+  <h2>Poisson Distribution</h2>
+    <p>
+      \begin{align}
+      f(k;\lambda)&=\frac{\lambda^k e^{-\lambda}}{k!}
+      \end{align}
+    </p>
+</div>
+
+<div data-role="collapsible" data-theme='a' data-iconpos='right' data-content-theme='b'>
+  <h2>Normal Distribution</h2>
+    <p>
+      \begin{align}
+      f(x,\mu,\sigma)&=\frac{1}{\sigma \sqrt{2 \pi}} e^{-\frac{(x-\mu)^2}{2\sigma ^2}}
+      \end{align}
+    </p>
+</div>
+
+<div data-role="collapsible" data-theme='a' data-iconpos='right' data-content-theme='b'>
+  <h2>Simple Linera Regression</h2>
+    <p>
+      $
+      \hat{y_i}=\hat{\alpha} + \hat{\beta}x_i
+      \begin{cases}
+      \hat{\alpha}=\bar{y}-\hat{\beta}\bar{x} \\ 
+      \hat{\beta}=\frac{\sum(x_i - \bar{x})(y_i - \bar{y})}{\sum(x_i - \bar{x})^2}  
+      \end{cases}
+      $
+    </p>
+</div>
+
+<div data-role="collapsible" data-theme='a' data-iconpos='right' data-content-theme='b'>
+  <h2>Co-efficient of Correlation</h2>
+    <p>
+      
+      $r=\frac{\sum{x_i y_i}-\frac{\sum x_i \sum y_i}{n}}{\sqrt{\{\sum{{x_i}^2}-\frac{(\sum x_i)^2}{n}\}\{\sum{{y_i}^2}-\frac{(\sum y_i)^2}{n}\}}}
+      $
+    </p>
+</div>
+
+
+</body>
+</html>
+  

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>statilla</title>
+<!-- Copyright (c) 2009-2014 The MathJax Consortium -->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />-->
+<!--<meta http-equiv="X-UA-Compatible" content="IE=edge" />-->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+  });
+</script>
+<script type="text/javascript" src="MathJax.js"></script>
+
+<style>
+h1 {text-align:center}
+h2 {
+  font-weight: bold;
+  background-color: #DDDDDD;
+  padding: .2em .5em;
+  margin-top: 1.5em;
+  border-top: 3px solid #666666;
+  border-bottom: 2px solid #999999;
+}
+</style>
+</head>
+<body>
+
+<noscript>
+<div style="color:#CC0000; text-align:center">
+<b>Warning: <a href="http://www.mathjax.org/">MathJax</a>
+requires JavaScript to process the mathematics on this page.<br />
+If your browser supports JavaScript, be sure it is enabled.</b>
+</div>
+<hr>
+</noscript>
+
+
+
+<blockquote>
+
+
+<h2>Arithmatic mean</h2>
+<p>
+ For Ungrouped data:
+ \begin{align}
+ AM & = \frac{\sum_{i=1}^n x_i}{n} 
+ \end{align} 
+For grouped data:
+\begin{align}
+AM & =\frac{\sum_{i=1}^n f_i x_i}{\sum_{i=1}^n f_i}
+\end{align}
+</p>
+
+<h2>Geometric Mean</h2>
+<p>
+  For Ungrouped data:
+  \begin{align}
+  GM & = (\prod_{i=1}^{n} x_i)^\frac{1 }{n}
+  \end{align}
+
+  For Grouped data:
+  \begin{align}
+  GM & = (\prod_{i=1}^{k} {x_i}^{f_i})^\frac{1}{n}
+  \end{align}
+</p>
+<h2>Harmonic Mean</h2>
+<p>
+For Ungrouped data:
+\begin{align}
+HM & = \frac{n}{\sum_{i=1}^{n} \frac{1}{x_i}}
+\end{align}
+For Grouped data:
+\begin{align}
+HM & = \frac{\sum_{i=1}^{N} f_i}{\sum_{i=1}^{N} \frac{f_i}{\frac{f_i}{x_i}}}
+\end{align}
+</p>
+
+<h2>Median</h2>
+<p>For Ungrouped data: $\frac{n+1}{2}$th value when \(n\) is odd and \(\frac{\frac{n}{2}th\space value + (\frac{n}{2} +1)th\space value }{2}\) when \(n\) is even.</p>
+<p>
+  For Grouped data:
+  \begin{align}
+  M_e & = L + \frac{\frac{N}{2}-F}{f} \times C
+  \end{align}
+</p>
+<h2>Mode</h2>
+<p>For Ungrouped data: Visible highest value. </p>
+<p>For Grouped Data:
+\begin{align}
+M_o & = L + \frac{\Delta_1}{\Delta_1 + \Delta_2} \times C
+\end{align}</p>
+<h2>Quartile</h2>
+<p>
+  \begin{align}
+  Q & = L + \frac{\frac{N}{4}i - F}{f} \times C
+  \end{align}
+</p>
+<h2>Decile</h2>
+<p>
+  \begin{align}
+  D & = L + \frac{\frac{N}{10}i - F}{f} \times C
+  \end{align}
+</p>
+
+<h2>Quartile Deviation</h2>
+<p>
+  \begin{align}
+  QD & = \frac{Q_2 - Q_1}{2}
+  \end{align}
+</p>
+<h2>Mean Deviations</h2>
+<p>
+  For Ungrouped Data:
+  \begin{align}
+  MD\space of \space\bar{x} & = \frac{\sum_{i=1}^{n} \lvert x_i - \bar{x} \rvert}{n} \\
+  MD\space of \space M_e & = \frac{\sum_{i=1}^{n} \lvert x_i - M_e \rvert}{n}\\
+  MD\space of \space M_o & = \frac{\sum_{i=1}^{n} \lvert x_i - M_o \rvert}{n}
+  \end{align}
+</p>
+<p>
+  For Grouped Data:
+  \begin{align}
+  MD\space of \space\bar{x} & = \frac{\sum_{i=1}^{n} f_i \lvert x_i - \bar{x} \rvert}{n} \\
+  MD\space of \space M_e & = \frac{\sum_{i=1}^{n} f_i \lvert x_i - M_e \rvert}{n}\\
+  MD\space of \space M_o & = \frac{\sum_{i=1}^{n} f_i \lvert x_i - M_o \rvert}{n}
+  \end{align}
+</p>
+<h2>Variance</h2>
+<p>
+  For Ungrouped Data:
+  \begin{align}
+  V\space of\space x & = \frac{1}{n} \sum_{i=1}^{n}(x_i -\bar{x})^2
+  \end{align}
+</p>
+<p>
+  For Grouped Data:
+  \begin{align}
+  V\space of\space x & = \frac{1}{N} \sum_{i=1}^{n} f_i (x_i -\bar{x})^2
+  \end{align}
+</p>
+
+<h2>Standard Deviation</h2>
+<p>Ungrouped:
+\begin{align}
+SD\space of\space x & = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2}
+\end{align}</p>
+
+<p>Grouped:
+\begin{align}
+SD\space of\space x & = \sqrt{\frac{1}{N} \sum_{i=1}^{n} f_i(x_i - \bar{x})^2}
+\end{align}</p>
+
+<h2>Co-efficient of Variation</h2>
+<p>
+  \begin{align}
+  CV & = \frac{Standard\space Deviation}{\bar{x}} \times 100 
+  \end{align}
+</p>
+<h2>Probability</h2>
+<p>
+  \begin{align}
+  P(A)& =\frac{Favourable\space outcome\space\ of\space an\space event}{Total\space number\space of\space outcomes\space of\space the\space experiment}\\
+&= \frac{m}{n}
+  \end{align}
+
+</p>
+<h2>Probability:Additive law</h2>
+<p>
+  \begin{align}
+  P(A \cup B) & = P(A) + P(B) - P(A \cap B)
+  \end{align}
+</p>
+<h2>Probability: Multiplicative law</h2>
+<p>
+  \begin{align}
+  P(AB) & = P(A) \times P(B/A) \\
+    & = P(B) \times P(A/B)
+  \end{align}
+</p>
+<h2>Conditional Probability</h2>
+<p>
+  \begin{align}
+  P(A/B)&= \frac{P(AB)}{B}\\
+  P(B/A)&= \frac{P(AB)}{A}
+  \end{align}
+</p>
+<h2>Bayes's Theorem</h2>
+<p>
+  \begin{align}
+  P(B_k/A)&=\frac{P(B_k) \cdot P(A/B_k)}{\sum_{i=1}^{n} P(B_i) \cdot P(A/B_i)}
+  \end{align}
+</p>
+<h2>Binomial Distribution</h2>
+<p>
+  \begin{align}
+  f(k;n,p)&= {n \choose k}p^k(i-p)^{n-k}
+  \end{align}
+</p>
+<h2>Poisson Distribution</h2>
+<p>
+  \begin{align}
+  f(k;\lambda)&=\frac{\lambda^k e^{-\lambda}}{k!}
+  \end{align}
+</p>
+<h2>Normal Distribution</h2>
+<p>
+  \begin{align}
+  f(x,\mu,\sigma)&=\frac{1}{\sigma \sqrt{2 \pi}} e^{-\frac{(x-\mu)^2}{2\sigma ^2}}
+  \end{align}
+</p>
+<h2>Simple Linera Regression</h2>
+<p>
+  \begin{align}
+  \hat{y_i}&=\hat{\alpha} + \hat{\beta}x_i
+  \begin{cases}
+  \hat{\alpha}&=\bar{y}-\hat{\beta}\bar{x} \\ 
+  \hat{\beta}&=\frac{\sum(x_i - \bar{x})(y_i - \bar{y})}{\sum(x_i - \bar{x})^2}  
+  \end{cases}
+  \end{align}
+</p>
+
+<h2>Co-efficient of Correlation</h2>
+<p>
+  \begin{align}
+  r&=\frac{\sum{x_i y_i}-\frac{\sum x_i \sum y_i}{n}}{\sqrt{\{\sum{{x_i}^2}-\frac{(\sum x_i)^2}{n}\}\{\sum{{y_i}^2}-\frac{(\sum y_i)^2}{n}\}}}
+  \end{align}
+</p>
+</blockquote>
+
+</body>
+</html>
